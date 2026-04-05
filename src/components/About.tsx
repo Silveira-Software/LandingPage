@@ -5,9 +5,9 @@ import { motion, useInView } from "framer-motion";
 
 const stats = [
   { number: "8+", label: "Anos de Experiência" },
-  { number: "15+", label: "Projetos Próprios" },
+  { number: "24+", label: "Sistemas Próprios" },
   { number: "12+", label: "Sites de Clientes" },
-  { number: "98%", label: "Satisfação" },
+  { number: "98%", label: "Taxa de Aprovação" },
 ];
 
 const specialties = [
@@ -15,6 +15,9 @@ const specialties = [
   "Arquitetura & Infraestrutura",
   "Automação Inteligente",
   "Growth & Dados",
+  "Segurança & KYC",
+  "Disparos em Massa (WPP/SMS/Email)",
+  "Inteligência Artificial",
   "Visão Estratégica de Negócios",
 ];
 
@@ -136,14 +139,17 @@ export default function About() {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 1 }}
-          className="mt-24 grid grid-cols-2 md:grid-cols-5 gap-4"
+          className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-4"
         >
           {[
-            "Fintechs",
-            "iGaming",
-            "SaaS",
+            "Fintechs & Gateways",
+            "iGaming & Apostas",
+            "SaaS & Sistemas",
+            "Disparos WPP/SMS/Email",
+            "Segurança & KYC",
+            "IA & Automação",
             "Server-Side Tracking",
-            "Automação N8N",
+            "E-commerce & Shopify",
           ].map((area, i) => (
             <motion.div
               key={area}

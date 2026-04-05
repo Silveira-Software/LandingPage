@@ -162,7 +162,7 @@ export default function Hero() {
           className="mb-6"
         >
           <span className="text-sm md:text-base tracking-[0.3em] uppercase text-white/40 font-light">
-            Full Stack Developer &bull; Automação &bull; Fintech &bull; iGaming
+            Full Stack Developer &bull; Fintech &bull; iGaming &bull; Automação &bull; Segurança &bull; IA
           </span>
         </motion.div>
 
