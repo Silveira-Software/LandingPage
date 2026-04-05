@@ -6,8 +6,8 @@ import { motion, useInView } from "framer-motion";
 const contactLinks = [
   {
     label: "E-mail",
-    value: "dzk.falecomigo@gmail.com",
-    href: "mailto:dzk.falecomigo@gmail.com",
+    value: "contato@silveirasoftware.com",
+    href: "mailto:contato@silveirasoftware.com",
     icon: "📧",
   },
   {
@@ -23,10 +23,16 @@ const contactLinks = [
     icon: "💻",
   },
   {
-    label: "Portfólio",
-    value: "silveirasoftware.liberar.site",
-    href: "https://silveirasoftware.liberar.site",
-    icon: "🌎",
+    label: "LinkedIn",
+    value: "Silveira Software",
+    href: "https://www.linkedin.com/company/silveira-software",
+    icon: "💼",
+  },
+  {
+    label: "Instagram",
+    value: "@silveirasoftware",
+    href: "https://instagram.com/silveirasoftware",
+    icon: "📸",
   },
 ];
 

@@ -5,34 +5,64 @@ import { motion, useInView } from "framer-motion";
 
 const services = [
   {
-    icon: "🏗️",
-    title: "Sistemas Completos",
-    description: "SaaS, fintech, games e automação — do conceito ao deploy.",
+    icon: "⚙️",
+    title: "Automação N8N",
+    description: "Automatize processos, integre sistemas e crie workflows inteligentes que trabalham 24/7 para seu negócio.",
   },
   {
-    icon: "☁️",
-    title: "Infra AWS Escalável",
-    description: "Arquitetura cloud com EC2, S3, RDS e escalabilidade real.",
+    icon: "💳",
+    title: "Gateway de Pagamento",
+    description: "Integração completa com PIX, cartões e boletos. Taxas competitivas e até 98% de aprovação.",
+  },
+  {
+    icon: "🖥️",
+    title: "Sistemas Web & SaaS",
+    description: "Desenvolvimento de sistemas completos, painéis administrativos, CRMs e ERPs personalizados.",
+  },
+  {
+    icon: "📺",
+    title: "Streaming & IPTV",
+    description: "Plataformas de streaming completas com milhares de canais, filmes e séries em HD/4K.",
+  },
+  {
+    icon: "🛒",
+    title: "E-commerce",
+    description: "Lojas virtuais completas com carrinho, pagamento integrado, gestão de produtos e estoque.",
+  },
+  {
+    icon: "💬",
+    title: "WhatsApp & SMS",
+    description: "Sistemas de automação, envio em massa e integração com WhatsApp Business API e SMS.",
   },
   {
     icon: "🔗",
-    title: "APIs & WebSockets",
-    description: "Criação de APIs REST, websockets e integrações complexas.",
+    title: "APIs & Integrações",
+    description: "Desenvolvimento de APIs RESTful robustas, WebSockets e integrações com sistemas externos.",
   },
   {
-    icon: "⚙️",
-    title: "Automação com N8N",
-    description: "Fluxos inteligentes que eliminam trabalho manual.",
+    icon: "🎰",
+    title: "Games & iGaming",
+    description: "Plataformas de jogos, apostas esportivas e entretenimento digital com marco regulatório.",
   },
   {
     icon: "📡",
     title: "Server-Side Tracking",
-    description: "Rastreamento avançado com APIs de Conversão (Meta/TikTok).",
+    description: "Rastreamento avançado com APIs de Conversão Meta/TikTok e análise de tráfego.",
   },
   {
-    icon: "📉",
-    title: "Otimização de Processos",
-    description: "Redução de custos operacionais e consultoria técnica.",
+    icon: "☁️",
+    title: "Infra AWS & DevOps",
+    description: "Arquitetura cloud com EC2, S3, RDS, Docker e Linux Server com escalabilidade real.",
+  },
+  {
+    icon: "🤖",
+    title: "Inteligência Artificial",
+    description: "Escritórios virtuais com agentes de IA, automação inteligente e soluções de produtividade.",
+  },
+  {
+    icon: "🌐",
+    title: "Sites Institucionais",
+    description: "Sites modernos para barbearias, tabacarias, pizzarias, mecânicas e outros negócios locais.",
   },
 ];
 
@@ -66,7 +96,7 @@ export default function Services() {
           </motion.h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {services.map((service, i) => (
             <motion.div
               key={service.title}

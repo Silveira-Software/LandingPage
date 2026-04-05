@@ -5,8 +5,9 @@ import { motion, useInView } from "framer-motion";
 
 const stats = [
   { number: "8+", label: "Anos de Experiência" },
-  { number: "11", label: "Repositórios" },
-  { number: "∞", label: "Soluções Entregues" },
+  { number: "15+", label: "Projetos Próprios" },
+  { number: "12+", label: "Sites de Clientes" },
+  { number: "98%", label: "Satisfação" },
 ];
 
 const specialties = [
@@ -109,7 +110,7 @@ export default function About() {
             </motion.div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {stats.map((stat, i) => (
                 <motion.div
                   key={stat.label}

@@ -3,56 +3,203 @@
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 
+const categories = ["Todos", "Fintech", "Games", "Automação", "E-commerce", "Streaming", "Sistema"];
+
 const projects = [
   {
     id: 1,
-    title: "CremePay",
-    subtitle: "Gateway de Pagamentos",
+    title: "CremePay Gateway",
+    subtitle: "Fintech",
     description:
-      "Sistema completo de intermediação financeira, com API, Dashboard, antifraude e integrações.",
-    tags: ["Fintech", "API", "Dashboard", "Antifraude"],
+      "Gateway de pagamentos com taxas competitivas, PIX instantâneo, cartões e boletos. Até 98% de aprovação.",
+    tags: ["PHP", "Node.js", "MySQL", "API REST"],
     color: "#6366f1",
     number: "01",
+    url: "https://cremepay.com/",
+    category: "Fintech",
+    icon: "💳",
   },
   {
     id: 2,
-    title: "iGaming Legalizado",
-    subtitle: "Plataformas White-Label",
+    title: "CremePay API",
+    subtitle: "Fintech API",
     description:
-      "Arquitetura para operações de apostas adequadas ao novo marco regulatório brasileiro.",
-    tags: ["iGaming", "White-Label", "Regulatório", "Escalável"],
-    color: "#a855f7",
+      "API robusta para integração de pagamentos com documentação completa e suporte técnico.",
+    tags: ["PHP", "Node.js", "MySQL", "REST API"],
+    color: "#10b981",
     number: "02",
+    url: "https://api.cremepay.com/",
+    category: "Fintech",
+    icon: "🔗",
   },
   {
     id: 3,
-    title: "Automação N8N",
-    subtitle: "Fluxos Inteligentes",
+    title: "CremePay SMS",
+    subtitle: "Comunicação",
     description:
-      "Fluxos inteligentes para CRMs, pós-venda, funis e integrações complexas entre sistemas.",
-    tags: ["N8N", "Automação", "CRM", "Integração"],
-    color: "#ec4899",
+      "Plataforma de envio de SMS em massa para campanhas de marketing e notificações.",
+    tags: ["PHP", "MySQL", "API SMS", "JavaScript"],
+    color: "#f43f5e",
     number: "03",
+    url: "https://sms.cremepay.com/",
+    category: "Automação",
+    icon: "📱",
   },
   {
     id: 4,
-    title: "FunilQIC Tracking",
-    subtitle: "Rastreamento Avançado",
+    title: "PG Sorte Bet",
+    subtitle: "Apostas Esportivas",
     description:
-      "Ferramenta própria de rastreamento avançado (SS Tracking + Eventos + APIs).",
-    tags: ["Tracking", "Server-Side", "Analytics", "APIs"],
-    color: "#3b82f6",
+      "Plataforma completa de apostas esportivas com interface moderna e recursos avançados.",
+    tags: ["PHP", "MySQL", "JavaScript", "WebSocket"],
+    color: "#ec4899",
     number: "04",
+    url: "https://bet.pgsorte.shop/",
+    category: "Games",
+    icon: "🎰",
   },
   {
     id: 5,
-    title: "NatLiving",
-    subtitle: "E-commerce",
+    title: "China Bet",
+    subtitle: "Games & Apostas",
     description:
-      "E-commerce otimizado com integrações personalizadas e automações de operação.",
-    tags: ["E-commerce", "Automação", "Performance", "UX"],
-    color: "#10b981",
+      "Plataforma de jogos e apostas com design moderno e sistema de pagamentos integrado.",
+    tags: ["PHP", "MySQL", "JavaScript", "API"],
+    color: "#0f3460",
     number: "05",
+    url: "https://chinabet.pgsorte.shop/",
+    category: "Games",
+    icon: "🎲",
+  },
+  {
+    id: 6,
+    title: "Retro Games",
+    subtitle: "Games de Habilidade",
+    description:
+      "Plataforma de jogos retrô de habilidade com possibilidade de ganho em dinheiro real.",
+    tags: ["JavaScript", "Canvas", "PHP", "MySQL"],
+    color: "#f97316",
+    number: "06",
+    url: "https://retrogames.pgsorte.shop/",
+    category: "Games",
+    icon: "🕹️",
+  },
+  {
+    id: 7,
+    title: "N8N Automações",
+    subtitle: "Automação de Workflows",
+    description:
+      "Plataforma de automação de workflows inteligentes com integração a centenas de APIs e serviços.",
+    tags: ["N8N", "Node.js", "Docker", "API REST"],
+    color: "#ff6b35",
+    number: "07",
+    url: "https://n8n.liberar.site/",
+    category: "Automação",
+    icon: "⚙️",
+  },
+  {
+    id: 8,
+    title: "FunilQIC Tracking",
+    subtitle: "Rastreamento Avançado",
+    description:
+      "Ferramenta própria de rastreamento avançado (SS Tracking + Eventos + APIs de Conversão Meta/TikTok).",
+    tags: ["Tracking", "Server-Side", "Analytics", "APIs"],
+    color: "#3b82f6",
+    number: "08",
+    url: "#",
+    category: "Automação",
+    icon: "📡",
+  },
+  {
+    id: 9,
+    title: "IPTV Streaming",
+    subtitle: "Streaming Platform",
+    description:
+      "Plataforma completa de streaming IPTV com mais de 10.000 canais, filmes e séries em HD/4K.",
+    tags: ["PHP", "MySQL", "HLS", "CDN"],
+    color: "#7c3aed",
+    number: "09",
+    url: "https://iptv.liberar.site/",
+    category: "Streaming",
+    icon: "📺",
+  },
+  {
+    id: 10,
+    title: "WhatsApp API",
+    subtitle: "Comunicação Empresarial",
+    description:
+      "Sistema de automação e envio de mensagens via WhatsApp para empresas.",
+    tags: ["Node.js", "WhatsApp API", "MySQL", "WebSocket"],
+    color: "#25d366",
+    number: "10",
+    url: "https://whatsapp.encxr.shop/",
+    category: "Automação",
+    icon: "💬",
+  },
+  {
+    id: 11,
+    title: "NatLiving E-commerce",
+    subtitle: "Loja Virtual",
+    description:
+      "Loja virtual de produtos naturais com carrinho, pagamento PIX e gestão completa de produtos.",
+    tags: ["WooCommerce", "PHP", "MySQL", "PIX"],
+    color: "#22c55e",
+    number: "11",
+    url: "https://natliving.liberar.site/",
+    category: "E-commerce",
+    icon: "🌿",
+  },
+  {
+    id: 12,
+    title: "Império Natalino",
+    subtitle: "E-commerce Sazonal",
+    description:
+      "E-commerce de decorações natalinas com frete grátis e desconto no PIX.",
+    tags: ["WooCommerce", "PHP", "MySQL", "PIX"],
+    color: "#dc2626",
+    number: "12",
+    url: "https://woodemo1.liberar.site/",
+    category: "E-commerce",
+    icon: "🎄",
+  },
+  {
+    id: 13,
+    title: "Brokers Ribeiro e Dias",
+    subtitle: "Sistema Imobiliário",
+    description:
+      "Sistema completo de imobiliária com busca inteligente, listagem de imóveis e contato via WhatsApp.",
+    tags: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
+    color: "#4776e6",
+    number: "13",
+    url: "https://diaseribeiro.com/",
+    category: "Sistema",
+    icon: "🏠",
+  },
+  {
+    id: 14,
+    title: "Pixel Agents",
+    subtitle: "Escritório Virtual com IA",
+    description:
+      "Escritório virtual com agentes de IA integrados para produtividade e automação de tarefas.",
+    tags: ["AI", "React", "Node.js", "WebSocket"],
+    color: "#a855f7",
+    number: "14",
+    url: "https://github.com/Silveira-Software/pixel-agents",
+    category: "Sistema",
+    icon: "🤖",
+  },
+  {
+    id: 15,
+    title: "RepoTown",
+    subtitle: "Open Source",
+    description:
+      "Plataforma open-source para gerenciamento e visualização de repositórios.",
+    tags: ["Open Source", "GitHub", "Node.js", "React"],
+    color: "#06b6d4",
+    number: "15",
+    url: "https://github.com/Silveira-Software/RepoTown",
+    category: "Sistema",
+    icon: "🏘️",
   },
 ];
 
@@ -60,6 +207,11 @@ export default function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [hoveredId, setHoveredId] = useState<number | null>(null);
+  const [activeFilter, setActiveFilter] = useState("Todos");
+
+  const filtered = activeFilter === "Todos"
+    ? projects
+    : projects.filter((p) => p.category === activeFilter);
 
   return (
     <section id="projects" className="relative py-32 md:py-48 grid-bg" ref={ref}>
@@ -76,7 +228,7 @@ export default function Projects() {
           </span>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-20 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-6">
           <div className="overflow-hidden">
             <motion.h2
               initial={{ y: 100 }}
@@ -94,113 +246,117 @@ export default function Projects() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-white/40 max-w-md text-sm"
           >
-            Cada projeto é uma solução completa pensada para escalabilidade,
-            performance e resultado real de negócios.
+            {projects.length} projetos entregues — cada um pensado para
+            escalabilidade, performance e resultado real.
           </motion.p>
         </div>
 
-        {/* Project list */}
-        <div className="flex flex-col">
-          {projects.map((project, i) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 40 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: i * 0.12 }}
-              onMouseEnter={() => setHoveredId(project.id)}
-              onMouseLeave={() => setHoveredId(null)}
-              className="group relative border-t border-white/5 py-8 md:py-12 transition-all duration-500"
-              data-cursor="View"
+        {/* Category filters */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex flex-wrap gap-3 mb-16"
+        >
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveFilter(cat)}
+              className={`text-xs px-5 py-2.5 rounded-full border tracking-wider uppercase transition-all duration-300 ${
+                activeFilter === cat
+                  ? "bg-white text-black border-white"
+                  : "border-white/10 text-white/40 hover:border-white/30 hover:text-white/70"
+              }`}
             >
-              {/* Hover background glow */}
-              <AnimatePresence>
-                {hoveredId === project.id && (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="absolute inset-0 -mx-6 md:-mx-12 rounded-2xl"
-                    style={{
-                      background: `radial-gradient(ellipse at center, ${project.color}08 0%, transparent 70%)`,
-                    }}
-                  />
-                )}
-              </AnimatePresence>
+              {cat}
+            </button>
+          ))}
+        </motion.div>
 
-              <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-12">
-                {/* Number */}
-                <span
-                  className="text-5xl md:text-7xl font-bold transition-colors duration-500"
+        {/* Project grid - card layout */}
+        <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <AnimatePresence mode="popLayout">
+            {filtered.map((project, i) => (
+              <motion.a
+                key={project.id}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
+                onMouseEnter={() => setHoveredId(project.id)}
+                onMouseLeave={() => setHoveredId(null)}
+                className="group relative rounded-2xl border border-white/5 hover:border-white/15 overflow-hidden transition-all duration-500 block"
+                data-cursor="View"
+              >
+                {/* Card header gradient */}
+                <div
+                  className="h-32 flex items-center justify-center relative overflow-hidden"
                   style={{
-                    color:
-                      hoveredId === project.id
-                        ? project.color
-                        : "rgba(255,255,255,0.05)",
+                    background: `linear-gradient(135deg, ${project.color}20 0%, ${project.color}05 100%)`,
                   }}
                 >
-                  {project.number}
-                </span>
+                  <span className="text-5xl group-hover:scale-125 transition-transform duration-500">
+                    {project.icon}
+                  </span>
+                  <span
+                    className="absolute top-3 right-4 text-4xl font-bold transition-colors duration-500"
+                    style={{
+                      color:
+                        hoveredId === project.id
+                          ? `${project.color}40`
+                          : "rgba(255,255,255,0.04)",
+                    }}
+                  >
+                    {project.number}
+                  </span>
+                </div>
 
-                {/* Info */}
-                <div className="flex-1">
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-2">
-                    <motion.h3
-                      className="text-2xl md:text-3xl font-bold text-white group-hover:translate-x-2 transition-transform duration-500"
-                    >
+                {/* Card body */}
+                <div className="p-5">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="text-base font-semibold text-white group-hover:text-white transition-colors">
                       {project.title}
-                    </motion.h3>
-                    <span className="text-sm text-white/30 font-light">
-                      — {project.subtitle}
-                    </span>
+                    </h3>
                   </div>
-                  <p className="text-white/40 text-sm md:text-base font-light max-w-lg">
+                  <span
+                    className="inline-block text-[10px] px-2.5 py-1 rounded-full mb-3 font-medium tracking-wider uppercase"
+                    style={{
+                      background: `${project.color}15`,
+                      color: project.color,
+                    }}
+                  >
+                    {project.subtitle}
+                  </span>
+                  <p className="text-white/40 text-xs leading-relaxed mb-4 line-clamp-2">
                     {project.description}
                   </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[10px] px-2 py-1 border border-white/5 rounded text-white/30 group-hover:text-white/50 transition-colors"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 md:justify-end">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-[11px] px-3 py-1.5 border border-white/10 rounded-full text-white/40 group-hover:border-white/20 group-hover:text-white/60 transition-all duration-300"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Arrow */}
-                <motion.div
-                  className="hidden md:flex items-center justify-center w-12 h-12 rounded-full border border-white/10 group-hover:border-white/30 group-hover:bg-white/5 transition-all duration-300"
-                  animate={{
-                    x: hoveredId === project.id ? 5 : 0,
-                    rotate: hoveredId === project.id ? -45 : 0,
+                {/* Hover glow */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                  style={{
+                    background: `radial-gradient(circle at 50% 0%, ${project.color}10 0%, transparent 60%)`,
                   }}
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    className="text-white/40 group-hover:text-white transition-colors"
-                  >
-                    <path
-                      d="M1 8h14M9 2l6 6-6 6"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </motion.div>
-              </div>
-            </motion.div>
-          ))}
-
-          {/* Bottom border */}
-          <div className="border-t border-white/5" />
-        </div>
+                />
+              </motion.a>
+            ))}
+          </AnimatePresence>
+        </motion.div>
 
         {/* CTA */}
         <motion.div
@@ -219,12 +375,7 @@ export default function Projects() {
             data-cursor="GitHub"
           >
             Ver todos no GitHub
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 16 16"
-              fill="none"
-            >
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
               <path
                 d="M1 8h14M9 2l6 6-6 6"
                 stroke="currentColor"
