@@ -28,7 +28,7 @@ export default function Footer() {
               GitHub
             </motion.a>
             <motion.a
-              href="https://wa.me/5511945193805"
+              href="https://wa.me/5511946317129"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/30 hover:text-white transition-colors text-sm"
@@ -38,12 +38,14 @@ export default function Footer() {
               WhatsApp
             </motion.a>
             <motion.a
-              href="mailto:dzk.falecomigo@gmail.com"
+              href="https://www.linkedin.com/in/carlos-eduardo-08a012394/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white/30 hover:text-white transition-colors text-sm"
               whileHover={{ y: -2 }}
               data-cursor="Open"
             >
-              E-mail
+              LinkedIn
             </motion.a>
           </div>
         </div>

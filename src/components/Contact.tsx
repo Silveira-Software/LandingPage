@@ -5,15 +5,9 @@ import { motion, useInView } from "framer-motion";
 
 const contactLinks = [
   {
-    label: "E-mail",
-    value: "contato@silveirasoftware.com",
-    href: "mailto:contato@silveirasoftware.com",
-    icon: "📧",
-  },
-  {
     label: "WhatsApp",
-    value: "+55 11 94519-3805",
-    href: "https://wa.me/5511945193805",
+    value: "+55 11 94631-7129",
+    href: "https://wa.me/5511946317129",
     icon: "📞",
   },
   {
@@ -24,8 +18,8 @@ const contactLinks = [
   },
   {
     label: "LinkedIn",
-    value: "Silveira Software",
-    href: "https://www.linkedin.com/company/silveira-software",
+    value: "Carlos Eduardo",
+    href: "https://www.linkedin.com/in/carlos-eduardo-08a012394/",
     icon: "💼",
   },
   {
