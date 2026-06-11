@@ -59,7 +59,7 @@ const projects = [
     number: "04",
     url: "#",
     category: "Fintech",
-    icon: "�",
+    icon: "🛒",
   },
   // ═══════════════════ GAMES & iGAMING ═══════════════════
   {
@@ -166,7 +166,7 @@ const projects = [
     number: "12",
     url: "https://sms.cremepay.com/",
     category: "Disparos",
-    icon: "�",
+    icon: "📱",
   },
   {
     id: 13,
@@ -220,7 +220,7 @@ const projects = [
     number: "16",
     url: "https://iptv.liberar.site/",
     category: "Streaming",
-    icon: "�",
+    icon: "📺",
   },
   // ═══════════════════ E-COMMERCE ═══════════════════
   {
@@ -287,7 +287,7 @@ const projects = [
     number: "21",
     url: "#",
     category: "IA & Tools",
-    icon: "�",
+    icon: "🧠",
   },
   {
     id: 22,
@@ -314,7 +314,7 @@ const projects = [
     number: "23",
     url: "https://diaseribeiro.com/",
     category: "Sistema",
-    icon: "�",
+    icon: "🏠",
   },
   {
     id: 24,

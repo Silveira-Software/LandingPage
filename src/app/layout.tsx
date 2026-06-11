@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://silveira-software.vercel.app"),
   title: "Silveira Software — Full Stack Developer | Automação, Fintech, iGaming",
   description:
     "Silveira Software — Desenvolvedor Full Stack Senior. Especialista em sistemas escaláveis, automação com N8N, fintechs, iGaming e server-side tracking. São Paulo, Brasil.",
