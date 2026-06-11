@@ -407,9 +407,9 @@ export default function Projects() {
             {filtered.map((project, i) => (
               <motion.a
                 key={project.id}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={project.url !== "#" ? project.url : undefined}
+                target={project.url !== "#" ? "_blank" : undefined}
+                rel={project.url !== "#" ? "noopener noreferrer" : undefined}
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}

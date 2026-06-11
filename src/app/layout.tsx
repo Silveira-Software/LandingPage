@@ -45,6 +45,39 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Silveira Software",
+  url: "https://silveira-software.vercel.app",
+  description:
+    "Desenvolvimento full stack, automação, fintech, iGaming e IA. Sistemas que geram resultado — do zero ao scale.",
+  founder: {
+    "@type": "Person",
+    name: "Carlos Eduardo Silveira",
+    jobTitle: "Arquiteto de Sistemas / Full Stack Developer",
+    sameAs: [
+      "https://github.com/Silveira-Software",
+      "https://www.linkedin.com/in/carlos-eduardo-08a012394/",
+      "https://instagram.com/silveirasoftware",
+    ],
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "São Paulo",
+    addressRegion: "SP",
+    addressCountry: "BR",
+  },
+  knowsAbout: [
+    "Desenvolvimento Full Stack",
+    "Automação N8N",
+    "Gateways de Pagamento",
+    "iGaming",
+    "Inteligência Artificial",
+    "Server-Side Tracking",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -55,7 +88,13 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-      <body className="bg-black text-white overflow-x-hidden">{children}</body>
+      <body className="bg-black text-white overflow-x-hidden">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

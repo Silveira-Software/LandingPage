@@ -123,8 +123,8 @@ export default function ClientSites() {
         <div className="relative overflow-hidden mb-5">
           <motion.div
             className="flex gap-5"
-            animate={{ x: [0, -1800] }}
-            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+            animate={{ x: [0, -3840] }}
+            transition={{ duration: 85, repeat: Infinity, ease: "linear" }}
           >
             {[...clientSites, ...clientSites].map((site, i) => (
               <motion.a

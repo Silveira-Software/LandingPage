@@ -51,12 +51,12 @@ export default function Navigation() {
           </motion.a>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-10">
             {navItems.map((item) => (
               <motion.button
                 key={item.label}
                 onClick={() => handleNav(item.href)}
-                className="text-sm text-white/60 hover:text-white transition-colors tracking-widest uppercase font-light"
+                className="text-sm text-white/60 hover:text-white transition-colors tracking-widest uppercase font-light whitespace-nowrap"
                 whileHover={{ y: -2 }}
                 data-cursor="View"
               >
@@ -77,8 +77,10 @@ export default function Navigation() {
 
           {/* Mobile burger */}
           <button
-            className="md:hidden flex flex-col gap-1.5 p-2"
+            className="lg:hidden flex flex-col gap-1.5 p-2"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={isOpen}
           >
             <motion.span
               className="w-6 h-[1.5px] bg-white block"

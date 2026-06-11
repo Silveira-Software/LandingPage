@@ -44,7 +44,7 @@ export default function Contact() {
           className="mb-6"
         >
           <span className="text-xs tracking-[0.4em] uppercase text-white/30 font-mono">
-            05 / Contato
+            06 / Contato
           </span>
         </motion.div>
 
@@ -77,7 +77,7 @@ export default function Contact() {
 
             {/* Big CTA */}
             <motion.a
-              href="https://wa.me/5511945193805"
+              href="https://wa.me/5511946317129"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
