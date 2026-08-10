@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silveira Software — Full Stack Developer | Automação, Fintech, iGaming</title>
+<meta name="description" content="Silveira Software — Desenvolvedor Full Stack Senior. Especialista em sistemas escaláveis, automação com N8N, fintechs, iGaming e server-side tracking. São Paulo, Brasil.">
+<meta name="author" content="Carlos Eduardo Silveira">
+<meta property="og:title" content="Silveira Software — Full Stack Developer">
+<meta property="og:description" content="Construindo sistemas que geram resultado — do zero ao scale.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-inner">
+    <span class="loader-logo">SILVEIRA<span>SOFTWARE</span></span>
+    <div class="loader-bar"><div class="loader-progress"></div></div>
+  </div>
+</div>
+
+<!-- Custom cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Film grain + vignette overlay -->
+<div class="grain"></div>
+<div class="vignette"></div>
+
+<!-- Nav -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav-logo">SILVEIRA<span>SOFTWARE</span></a>
+  <nav class="nav-links">
+    <a href="#about" data-hover>Sobre</a>
+    <a href="#stack" data-hover>Tech Stack</a>
+    <a href="#projects" data-hover>Projetos</a>
+    <a href="#clients" data-hover>Clientes</a>
+    <a href="#contact" data-hover>Contato</a>
+  </nav>
+  <a class="nav-github" href="https://github.com/Silveira-Software" target="_blank" rel="noopener" data-hover>GitHub →</a>
+  <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" data-hover>Sobre</a>
+  <a href="#stack" data-hover>Tech Stack</a>
+  <a href="#projects" data-hover>Projetos</a>
+  <a href="#clients" data-hover>Clientes</a>
+  <a href="#contact" data-hover>Contato</a>
+  <a href="https://github.com/Silveira-Software" target="_blank" rel="noopener">GitHub →</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas id="scene"></canvas>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <p class="hero-kicker" data-split>Full Stack Developer • Fintech • iGaming • Automação • Segurança • IA</p>
+      <h1 class="hero-title">
+        <span class="line" data-split>SILVEIRA</span>
+        <span class="line line-outline" data-split>SOFTWARE</span>
+      </h1>
+      <p class="hero-sub" data-split>Construindo sistemas que geram resultado — do zero ao scale.<br>Performance, automação e escalabilidade.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-solid" data-hover>Ver Projetos</a>
+        <a href="#contact" class="btn btn-ghost" data-hover>Fale Comigo</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"><div class="scroll-dot"></div></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <p class="eyebrow" data-reveal>01 / Sobre</p>
+      <h2 class="section-title" data-reveal>Código + Negócios.<br>Não construo apenas sistemas.</h2>
+      <div class="about-grid">
+        <div class="about-text" data-reveal>
+          <p>Sou Desenvolvedor Full Stack e Fundador da Silveira Software, atuando há mais de 8 anos na construção de sistemas complexos "do zero ao scale". Construo soluções que geram dinheiro e eliminam atrito operacional.</p>
+          <blockquote>"O que limita nossos sistemas — e o que podemos construir — é só a criatividade."</blockquote>
+          <ul class="specialties">
+            <li>Engenharia de Software</li>
+            <li>Arquitetura &amp; Infraestrutura</li>
+            <li>Automação Inteligente</li>
+            <li>Growth &amp; Dados</li>
+            <li>Segurança &amp; KYC</li>
+            <li>Disparos em Massa (WPP/SMS/Email)</li>
+            <li>Inteligência Artificial</li>
+            <li>Visão Estratégica de Negócios</li>
+          </ul>
+        </div>
+        <div class="about-stats" data-reveal>
+          <div class="stat"><span class="stat-num" data-count="8" data-suffix="+">0</span><span class="stat-label">Anos de Experiência</span></div>
+          <div class="stat"><span class="stat-num" data-count="24" data-suffix="+">0</span><span class="stat-label">Sistemas Próprios</span></div>
+          <div class="stat"><span class="stat-num" data-count="12" data-suffix="+">0</span><span class="stat-label">Sites de Clientes</span></div>
+          <div class="stat"><span class="stat-num" data-count="98" data-suffix="%">0</span><span class="stat-label">Taxa de Aprovação</span></div>
+        </div>
+      </div>
+      <div class="tags-row" data-reveal>
+        <span>Fintechs &amp; Gateways</span><span>iGaming &amp; Apostas</span><span>SaaS &amp; Sistemas</span>
+        <span>Disparos WPP/SMS/Email</span><span>Segurança &amp; KYC</span><span>IA &amp; Automação</span>
+        <span>Server-Side Tracking</span><span>E-commerce &amp; Shopify</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="section section-alt" id="stack">
+    <div class="container">
+      <p class="eyebrow" data-reveal>02 / Tech Stack</p>
+      <h2 class="section-title" data-reveal>Ferramentas que dominam resultados</h2>
+      <div class="stack-grid">
+        <div class="stack-col" data-reveal>
+          <h3>Linguagens</h3>
+          <div class="skill"><span>PHP</span><i style="--w:95%"></i></div>
+          <div class="skill"><span>JavaScript (ES6+)</span><i style="--w:90%"></i></div>
+          <div class="skill"><span>Node.js</span><i style="--w:88%"></i></div>
+          <div class="skill"><span>React.js</span><i style="--w:85%"></i></div>
+          <div class="skill"><span>HTML5 / CSS3</span><i style="--w:95%"></i></div>
+          <div class="skill"><span>SQL</span><i style="--w:90%"></i></div>
+          <div class="skill"><span>MongoDB</span><i style="--w:80%"></i></div>
+        </div>
+        <div class="stack-col" data-reveal>
+          <h3>Infra &amp; DevOps</h3>
+          <div class="skill"><span>AWS (EC2, S3, RDS)</span><i style="--w:88%"></i></div>
+          <div class="skill"><span>Docker</span><i style="--w:85%"></i></div>
+          <div class="skill"><span>Linux Server</span><i style="--w:90%"></i></div>
+          <div class="skill"><span>WebSockets</span><i style="--w:82%"></i></div>
+          <div class="skill"><span>Webhooks</span><i style="--w:90%"></i></div>
+        </div>
+        <div class="stack-col" data-reveal>
+          <h3>Automação &amp; Integração</h3>
+          <div class="skill"><span>N8N (Especialista)</span><i style="--w:95%"></i></div>
+          <div class="skill"><span>APIs REST</span><i style="--w:92%"></i></div>
+          <div class="skill"><span>Integração Gateways</span><i style="--w:90%"></i></div>
+          <div class="skill"><span>WhatsApp API</span><i style="--w:85%"></i></div>
+          <div class="skill"><span>RPA</span><i style="--w:80%"></i></div>
+        </div>
+        <div class="stack-col" data-reveal>
+          <h3>Growth &amp; Dados</h3>
+          <div class="skill"><span>Server-Side Tracking</span><i style="--w:90%"></i></div>
+          <div class="skill"><span>API de Conversões</span><i style="--w:88%"></i></div>
+          <div class="skill"><span>Análise de Tráfego</span><i style="--w:85%"></i></div>
+          <div class="skill"><span>SEO Técnico</span><i style="--w:82%"></i></div>
+        </div>
+      </div>
+      <ul class="philosophy" data-reveal>
+        <li>Tecnologia como motor de negócios</li>
+        <li>Automação para escalar, não para remendar</li>
+        <li>Código limpo, robusto e voltado a performance</li>
+        <li>Criatividade acima de burocracia</li>
+        <li>Soluções que resolvem problemas reais</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="eyebrow" data-reveal>03 / Projetos</p>
+      <h2 class="section-title" data-reveal>Projetos de Destaque</h2>
+      <p class="section-sub" data-reveal>24 projetos entregues — cada um pensado para escalabilidade, performance e resultado real.</p>
+      <div class="filters" id="filters" data-reveal>
+        <button class="filter active" data-filter="all">Todos</button>
+        <button class="filter" data-filter="Fintech">Fintech</button>
+        <button class="filter" data-filter="Games">Games</button>
+        <button class="filter" data-filter="Automação">Automação</button>
+        <button class="filter" data-filter="Disparos">Disparos</button>
+        <button class="filter" data-filter="Segurança">Segurança</button>
+        <button class="filter" data-filter="E-commerce">E-commerce</button>
+        <button class="filter" data-filter="Streaming">Streaming</button>
+        <button class="filter" data-filter="IA &amp; Tools">IA &amp; Tools</button>
+        <button class="filter" data-filter="Sistema">Sistema</button>
+      </div>
+      <div class="project-grid" id="projectGrid"></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <p class="eyebrow" data-reveal>04 / Serviços</p>
+      <h2 class="section-title" data-reveal>Como posso ajudar sua empresa?</h2>
+      <div class="services-grid" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="section" id="clients">
+    <div class="container">
+      <p class="eyebrow" data-reveal>05 / Clientes</p>
+      <h2 class="section-title" data-reveal>Sites para Clientes</h2>
+      <p class="section-sub" data-reveal>Sites institucionais modernos e responsivos criados para negócios locais — barbearias, tabacarias, pizzarias, mecânicas e mais.</p>
+      <div class="clients-grid" id="clientsGrid"></div>
+      <p class="clients-footnote" data-reveal>12+ sites institucionais entregues para negócios locais em São Paulo e região</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <canvas id="sceneContact"></canvas>
+    <div class="container">
+      <p class="eyebrow" data-reveal>06 / Contato</p>
+      <h2 class="section-title" data-reveal>Vamos construir algo juntos?</h2>
+      <p class="section-sub" data-reveal>Estou sempre aberto a novos desafios. Se você precisa de um sistema completo, automação inteligente ou consultoria técnica — entre em contato.</p>
+      <a href="https://wa.me/5511946317129" target="_blank" rel="noopener" class="btn btn-solid btn-lg" data-hover data-reveal>Fale no WhatsApp</a>
+      <div class="contact-links" data-reveal>
+        <a href="https://wa.me/5511946317129" target="_blank" rel="noopener" data-hover><span>📞 WhatsApp</span><small>+55 11 94631-7129</small></a>
+        <a href="https://github.com/Silveira-Software" target="_blank" rel="noopener" data-hover><span>💻 GitHub</span><small>Silveira-Software</small></a>
+        <a href="https://www.linkedin.com/in/carlos-eduardo-08a012394/" target="_blank" rel="noopener" data-hover><span>💼 LinkedIn</span><small>Carlos Eduardo</small></a>
+        <a href="https://instagram.com/silveirasoftware" target="_blank" rel="noopener" data-hover><span>📸 Instagram</span><small>@silveirasoftware</small></a>
+      </div>
+      <p class="contact-loc" data-reveal>📍 São Paulo, SP — Brasil</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="nav-logo">SILVEIRA<span>SOFTWARE</span></span>
+    <div class="footer-links">
+      <a href="https://github.com/Silveira-Software" target="_blank" rel="noopener" data-hover>GitHub</a>
+      <a href="https://wa.me/5511946317129" target="_blank" rel="noopener" data-hover>WhatsApp</a>
+      <a href="https://www.linkedin.com/in/carlos-eduardo-08a012394/" target="_blank" rel="noopener" data-hover>LinkedIn</a>
+    </div>
+    <span class="footer-copy">© 2026 Silveira Software. Todos os direitos reservados.</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
